@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "9JRFA3T+JhCxI9YXL+LBvxy2IPVnuj3i7CT9RsjtaPO4KXo0qRl2RNoJxqBVomFMZWL8Bk9Uxx6fcCWaWNqRXg==",
+  "dgSpecHash": "fgrehwpXuNeWekIparufAB1VrybQ/cbOiD0tvO9FiB54RVuOJPArseI6WXiiqPJhrpCg+ae/nvUl5VHzk9btRA==",
   "success": true,
   "projectFilePath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/rajvirsingh/.nuget/packages/microsoft.data.sqlite/7.0.1/microsoft.data.sqlite.7.0.1.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/microsoft.data.sqlite.core/7.0.1/microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.2/sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.core/2.1.2/sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.2/sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.2/sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "/Users/rajvirsingh/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

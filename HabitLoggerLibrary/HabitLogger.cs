@@ -35,18 +35,18 @@ public class HabitLoggerConnection : IDisposable
         command.ExecuteNonQuery();
     }
 
-    public void CreateLog()
+    public void CreateLog(int cupsOfWater)
     {
         throw new NotImplementedException();
     }
 
 
-    public string DisplayLogs()
+    public string GetLogs()
     {
         throw new NotImplementedException();
     }
 
-    public void DeleteLog()
+    public void DeleteLog(int id)
     {
         throw new NotImplementedException();
     }

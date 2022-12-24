@@ -1,59 +1,116 @@
-﻿// First connect to the database,
-// If it doesn't exist, the file will be created
-// Must create the necessary tables
-// Intoduce the application, Habit Logger
-// Show the menu to the user
-// Execute the necessary logice based on the option chosen in the menu
-// Continue the application until the user is finished
+﻿using HabitLogger;
+using HabitLoggerLibrary;
 
-
-// Create the SQLiteConnection object
-
-// Open the database file
-
-// Introduce the application
 DisplayIntroduction();
 
 RunHabitLogger();
-
 
 DisplayExit();
 
 
 void RunHabitLogger()
 {
+    using var connection = new HabitLoggerConnection();
     bool isDone = false;
     while (!isDone)
     {
         DisplayMenu();
         int option = ParseOption();
-        ExecuteOption(option);
+        isDone = ExecuteOption(option, connection);
     }
 }
 
-void DisplayExit()
+bool ExecuteOption(int option, HabitLoggerConnection connection)
 {
-    Console.WriteLine("Thank you for using Habit Logger.");
-    Console.WriteLine("Application is closing. Press any key...");
-    Console.ReadKey();
-}
-
-void ExecuteOption(int option)
-{
+    if (connection == null)
+    {
+        return false;
+    }
     switch (option)
     {
-        case 0:
+        case (int) Options.ExitApplication:
+            return false;
+        case (int) Options.ReadLogs:
+            ReadLogs(connection);
             break;
-        case 1:
+        case (int) Options.AddNewLog:
+            AddNewLog(connection);
             break;
-        case 2:
+        case (int) Options.DeleteLog:
+            DeleteLog(connection);
+            break; 
+        case (int) Options.UpdateLog:
+            UpdateLog(connection);
             break;
-        case 3:
-            break;
-        case 4:
+        default:
+            Console.WriteLine("Invalid option.");
+            Console.WriteLine("Must choose one of the options given.");
             break;
     }
+    return true;
 }
+
+void UpdateLog(HabitLoggerConnection connection)
+{
+    Console.WriteLine("Updating log...");
+    int id = GetId();
+    int cupsOfWater = GetCupsOfWater();
+    connection.UpdateLog(id, cupsOfWater);
+}
+
+void DeleteLog(HabitLoggerConnection connection)
+{
+    Console.WriteLine("Delete log...");
+    int id = GetId();
+    connection.DeleteLog(id);
+
+}
+
+int GetId()
+{
+    Console.WriteLine("Type id of the log: ");
+    string? input = Console.ReadLine();
+    int id;
+
+    while (string.IsNullOrEmpty(input) || !int.TryParse(input, out id))
+    {
+        Console.WriteLine("Invalid input. Type a valid id: ");
+        input = Console.ReadLine();
+    }
+    return id;
+}
+
+void AddNewLog(HabitLoggerConnection connection)
+{
+    Console.WriteLine("Adding new log...");
+    int cupsOfWater = GetCupsOfWater();
+    connection.CreateLog(cupsOfWater);
+}
+
+int GetCupsOfWater()
+{
+    Console.WriteLine("Type the number of cups: ");
+
+    string? input = Console.ReadLine();
+    int cupsOfWater;
+
+
+    while (string.IsNullOrEmpty(input) || !int.TryParse(input, out cupsOfWater))
+    {
+        Console.WriteLine("Invalid input. Type a valid number of cups: ");
+        input = Console.ReadLine();
+    }
+    return cupsOfWater;
+}
+
+void ReadLogs(HabitLoggerConnection connection)
+{
+    Console.WriteLine("Read all logs...");
+    string logs = connection.GetAllLogs();
+    Console.WriteLine("The following are the logs: ");
+    Console.WriteLine(logs);
+}
+
 
 int ParseOption()
 {
@@ -66,9 +123,17 @@ int ParseOption()
         Console.WriteLine("Displaying menu again.");
         Console.WriteLine();
         DisplayMenu();
+        input = Console.ReadLine();
     }
     return option;
 
+}
+
+void DisplayExit()
+{
+    Console.WriteLine("Thank you for using Habit Logger.");
+    Console.WriteLine("Application is closing. Press any key...");
+    Console.ReadKey();
 }
 
 void DisplayMenu()
