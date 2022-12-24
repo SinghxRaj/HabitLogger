@@ -1,13 +1,11 @@
-﻿using System;
-namespace HabitLogger
+﻿namespace HabitLogger;
+
+public enum Options
 {
-	public enum Options
-	{
-		ExitApplication,
-		ReadLogs,
-		AddNewLog,
-		DeleteLog,
-		UpdateLog
-	}
+	ExitApplication,
+	ReadLogs,
+	AddNewLog,
+	DeleteLog,
+	UpdateLog
 }
 

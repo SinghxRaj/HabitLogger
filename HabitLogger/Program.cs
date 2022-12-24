@@ -1,12 +1,8 @@
-﻿using HabitLogger;
+﻿using System.Text;
+using HabitLogger;
 using HabitLoggerLibrary;
 
-DisplayIntroduction();
-
-RunHabitLogger();
-
-DisplayExit();
-
+RunApplication();
 
 void RunHabitLogger()
 {
@@ -26,20 +22,21 @@ bool ExecuteOption(int option, HabitLoggerConnection connection)
     {
         return false;
     }
+
     switch (option)
     {
-        case (int) Options.ExitApplication:
+        case (int)Options.ExitApplication:
             return false;
-        case (int) Options.ReadLogs:
+        case (int)Options.ReadLogs:
             ReadLogs(connection);
             break;
-        case (int) Options.AddNewLog:
+        case (int)Options.AddNewLog:
             AddNewLog(connection);
             break;
-        case (int) Options.DeleteLog:
+        case (int)Options.DeleteLog:
             DeleteLog(connection);
-            break; 
-        case (int) Options.UpdateLog:
+            break;
+        case (int)Options.UpdateLog:
             UpdateLog(connection);
             break;
         default:
@@ -107,17 +104,24 @@ void ReadLogs(HabitLoggerConnection connection)
 {
     Console.WriteLine("Read all logs...");
     var logs = connection.GetAllLogs();
+
+    var sbLogs = new StringBuilder();
+    foreach (var log in logs)
+    {
+        sbLogs.AppendLine($"log id = {log.Item1}, cups of water = {log.Item3}, date = {log.Item2}");
+    }
+
     Console.WriteLine("The following are the logs: ");
-    Console.WriteLine(logs);
+    Console.WriteLine(sbLogs.ToString());
 }
 
 
 int ParseOption()
 {
     string? input = Console.ReadLine();
-    int option;
+    int option = -1;
 
-    while (string.IsNullOrEmpty(input) || !int.TryParse(input, out option))
+    while (!ValidOption(input, ref option))
     {
         Console.WriteLine("Invalid input. Must be one of the options given.");
         Console.WriteLine("Displaying menu again.");
@@ -153,4 +157,17 @@ void DisplayIntroduction()
     Console.WriteLine("Welcome to Habit Logger.");
     Console.WriteLine("----------------------");
     Console.WriteLine();
+}
+
+void RunApplication()
+{
+    DisplayIntroduction();
+    RunHabitLogger();
+    DisplayExit();
+}
+
+static bool ValidOption(string? input, ref int option)
+{
+    return !string.IsNullOrEmpty(input) && int.TryParse(input, out option)
+        && option >= 0 && option <= 4;
 }
