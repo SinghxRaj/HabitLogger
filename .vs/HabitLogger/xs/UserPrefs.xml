@@ -1,0 +1,5 @@
+﻿<Properties StartupConfiguration="{2B7F7C32-A24B-4D46-B01F-FE0CCC29F548}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.HabitLoggerLibrary FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.HabitLogger PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

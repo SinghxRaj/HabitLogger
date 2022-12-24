@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger/HabitLogger/HabitLogger.csproj",
+      "projectUniqueName": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger.csproj",
       "projectName": "HabitLogger",
-      "projectPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger/HabitLogger/HabitLogger.csproj",
+      "projectPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger.csproj",
       "packagesPath": "/Users/rajvirsingh/.nuget/packages/",
-      "outputPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/HabitLogger/HabitLogger/obj/",
+      "outputPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/rajvirsingh/.nuget/NuGet/NuGet.Config"

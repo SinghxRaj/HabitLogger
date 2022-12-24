@@ -1,0 +1,15 @@
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/bin/Debug/net6.0/HabitLogger
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/bin/Debug/net6.0/HabitLogger.deps.json
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/bin/Debug/net6.0/HabitLogger.runtimeconfig.json
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/bin/Debug/net6.0/HabitLogger.dll
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/bin/Debug/net6.0/HabitLogger.pdb
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.csproj.AssemblyReference.cache
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.AssemblyInfoInputs.cache
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.AssemblyInfo.cs
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.csproj.CoreCompileInputs.cache
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.dll
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/refint/HabitLogger.dll
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.pdb
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/HabitLogger.genruntimeconfig.cache
+/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLogger/obj/Debug/net6.0/ref/HabitLogger.dll
