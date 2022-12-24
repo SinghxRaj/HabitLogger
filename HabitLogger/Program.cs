@@ -106,7 +106,7 @@ int GetCupsOfWater()
 void ReadLogs(HabitLoggerConnection connection)
 {
     Console.WriteLine("Read all logs...");
-    string logs = connection.GetAllLogs();
+    var logs = connection.GetAllLogs();
     Console.WriteLine("The following are the logs: ");
     Console.WriteLine(logs);
 }
