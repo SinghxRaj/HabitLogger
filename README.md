@@ -51,8 +51,9 @@ operations.
 
 
 ## Areas to Improve about the project
-- Not using RAW SQL commands would be one area to improve. Using a tool such as EF or Dapper would be able to fix this which I still have to learn.
-- The design of the HabitLoggerConnection class. At the moment, if I create two instances of the class it will cause problems since I'm opening the database twice. A good fix for this would be to implement a singleton design where only one instance of the HabitLoggerConnection class can be used at any time. 
+- Improvement 1: Not using RAW SQL commands would be one area to improve. Using a tool such as EF or Dapper would be able to fix this which I still have to learn.
+- Improvement 2: The design of the HabitLoggerConnection class. At the moment, if I create two instances of the class it will cause problems since I'm opening the database twice. A good fix for this would be to implement a singleton design where only one instance of the HabitLoggerConnection class can be used at any time.
+- Improvement 3: Expanding on the project and adding more features. At the moment, the project only logs the amount of water the user drinks but there are improvements such as categorizing different habits and tracking each one. In the future, I can add this.
 
 
 ## Resouces Used
