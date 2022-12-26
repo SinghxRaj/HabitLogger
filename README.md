@@ -58,5 +58,6 @@ operations.
 ## Resouces Used
 - For the project idea - [C# Academy HabitLogger project](https://www.thecsharpacademy.com/project/12)
 - For information about the SQLiteConnection class - [Microsoft.Data.SQLite documentation](https://learn.microsoft.com/en-us/dotnet/standard/data/sqlite/?tabs=netcore-cli)
-- For SQL practice - [W3schools SQL Tutorial](https://www.w3schools.com/sql/) 
+- For SQL practice - [W3schools SQL Tutorial](https://www.w3schools.com/sql/)
+- Learning Resources for C# - [Plural Sight](https://www.pluralsight.com/)
 - Various StackOverflow posts
