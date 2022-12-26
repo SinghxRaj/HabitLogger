@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "sD8B1DhCuWLdwaxN3vOUCBJvipDSiKuRb4hmT/2Oyy8Z7hl0WZ8yc2lKDnqJiFEfcBQvRsWX1pEIYesy7wcoig==",
+  "dgSpecHash": "0jYF/qOyk7ugtIOtjnqdAFaSsME+dTBrO/IGGwbZIJuLx12/zGpAuVBpUWT+JDZ/SzTI6HGiT2hNfCbXQ0tJMg==",
   "success": true,
-  "projectFilePath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/HabitLoggerLibrary.csproj",
+  "projectFilePath": "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\HabitLoggerLibrary.csproj",
   "expectedPackageFiles": [
-    "/Users/rajvirsingh/.nuget/packages/microsoft.data.sqlite/7.0.1/microsoft.data.sqlite.7.0.1.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/microsoft.data.sqlite.core/7.0.1/microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.2/sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.core/2.1.2/sqlitepclraw.core.2.1.2.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.2/sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.2/sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
-    "/Users/rajvirsingh/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\rajvi\\.nuget\\packages\\microsoft.data.sqlite\\7.0.1\\microsoft.data.sqlite.7.0.1.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.1\\microsoft.data.sqlite.core.7.0.1.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\rajvi\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

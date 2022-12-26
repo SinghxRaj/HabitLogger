@@ -19,7 +19,6 @@ public class HabitLoggerConnection : IDisposable
 
     private SqliteConnection Connection { get; }
 
-
     public HabitLoggerConnection()
     {
         Connection = new(DatabaseFilePath);
@@ -30,26 +29,31 @@ public class HabitLoggerConnection : IDisposable
     private void EnsureTablesExist()
     {
         string createTable =
-                @"CREATE TABLE IF NOT EXISTS DRINK_WATER {
+                @"CREATE TABLE IF NOT EXISTS DRINK_WATER (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 Date DATETIME,
                 Quantity INTEGER
-                }";
+                )";
 
         ExecuteNonQuery(createTable);
     }
 
-    public void CreateLog(int cupsOfWater)
+    // Creates a new record in the database.
+    // Returns it was successfully created.
+    public bool CreateLog(int cupsOfWater)
     {
         string createLog =
             $@"INSERT INTO DRINK_WATER (Date, Quantity)
-            VALUES (CURDATE(), '{cupsOfWater}')";
+            VALUES (CURRENT_DATE, '{cupsOfWater}')";
 
-        ExecuteNonQuery(createLog);
+        return ExecuteNonQuery(createLog);
     }
 
 
-    public List<Tuple<int, DateTime, int>> GetAllLogs()
+    // Returns a list of tuples of the records in the database
+    // Within the tuple, Item1 = id, Item2 = date, Item3 = quantity
+    // If no records exist in the database, an empty list is returned.
+    public List<Tuple<int, string, int>> GetAllLogs()
     {
         string getAllLogs =
             $@" SELECT * FROM DRINK_WATER";
@@ -57,43 +61,43 @@ public class HabitLoggerConnection : IDisposable
         var command = new SqliteCommand(getAllLogs, Connection);
         var reader = command.ExecuteReader();
 
-        var logs = new List<Tuple<int, DateTime, int>>();
+        var logs = new List<Tuple<int, string, int>>();
         while (reader.Read())
         {
             int id = reader.GetInt32(0);
-            DateTime dt = reader.GetDateTime(1);
+            string date = reader.GetDateTime(1).ToString().Split(" ")[0];
             int quantity = reader.GetInt32(2);
-            logs.Add(Tuple.Create(id, dt, quantity));
+            logs.Add(Tuple.Create(id, date, quantity));
         }
         return logs;
     }
 
-    public void DeleteLog(int id)
+    // Deletes a record in the database.
+    // Returns whether the record was successfully deleted.
+    public bool DeleteLog(int id)
     {
         string deleteLog =
-            $@"DELETE DRINK_WATER 
-            WHERE id = {id}";
-        ExecuteNonQuery(deleteLog);
+            $@"DELETE FROM DRINK_WATER WHERE id = {id}";
+        return ExecuteNonQuery(deleteLog);
     }
 
-    public void UpdateLog(int id, int cupsOfWater)
+    // Updates a record in the database.
+    // Returns whether the record was successfully updated.
+    public bool UpdateLog(int id, int cupsOfWater)
     {
         string updateLog =
             $@"UPDATE DRINK_WATER
             SET Quantity = {cupsOfWater}
             WHERE id = {id}";
-        ExecuteNonQuery(updateLog);
+        return ExecuteNonQuery(updateLog);
     }
 
-    private void ExecuteNonQuery(string updateLog)
+    private bool ExecuteNonQuery(string updateLog)
     {
         var command = new SqliteCommand(updateLog, Connection);
-        command.ExecuteNonQuery();
+        return command.ExecuteNonQuery() != 0;
     }
 
-    public void Dispose()
-    {
-        Connection.Dispose();
-    }
+    public void Dispose() => Connection.Dispose();
 }
 
