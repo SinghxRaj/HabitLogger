@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\HabitLoggerLibrary.csproj": {}
+    "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/HabitLoggerLibrary.csproj": {}
   },
   "projects": {
-    "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\HabitLoggerLibrary.csproj": {
+    "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/HabitLoggerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\HabitLoggerLibrary.csproj",
+        "projectUniqueName": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/HabitLoggerLibrary.csproj",
         "projectName": "HabitLoggerLibrary",
-        "projectPath": "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\HabitLoggerLibrary.csproj",
-        "packagesPath": "C:\\Users\\rajvi\\.nuget\\packages\\",
-        "outputPath": "D:\\users\\rajvi\\Repos\\Personal-Projects\\HabitLogger\\HabitLoggerLibrary\\obj\\",
+        "projectPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/HabitLoggerLibrary.csproj",
+        "packagesPath": "/Users/rajvirsingh/.nuget/packages/",
+        "outputPath": "/Users/rajvirsingh/rajvi/repos/HabitLogger/HabitLoggerLibrary/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rajvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/rajvirsingh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
